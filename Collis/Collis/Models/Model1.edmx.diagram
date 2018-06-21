@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fa8831c92bdd4698806a2f28780ca980" Name="Diagram1">
+        <EntityTypeShape EntityType="CollisModel.About" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CollisModel.Contact" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CollisModel.Counter" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CollisModel.Filter" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CollisModel.HomePage" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="CollisModel.HomeSlideText" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="CollisModel.LogoNavBar" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CollisModel.News" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CollisModel.PageTitle" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CollisModel.Protofilio" Width="1.5" PointX="4.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CollisModel.Service" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CollisModel.SocialSite" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CollisModel.Testimonial" Width="1.5" PointX="8.75" PointY="6.75" />
+        <AssociationConnector Association="CollisModel.FK_SlideTexts_HomePagesId" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

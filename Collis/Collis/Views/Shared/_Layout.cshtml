@@ -1,0 +1,151 @@
+﻿@model Collis.Controllers.BaseModels
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Collis Personal Portfolio HTML5 Template">
+    <meta name="keywords" content="Personal, Portfolio, resume, cv, developer, personal resume, expart, professional, one page, onepage, HTML5, Template">
+    <meta name="author" content="Awesome_Theme">
+    <title>Collis - Personal Portfolio HTML5 Template</title>
+    <!-- Favicon -->
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="images/apple-icon.png" rel="icon" type="image/png">
+    <!-- Bootstrap Oublic/css -->
+    <link href="Public/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font-awesome Public/css -->
+    <link href="Public/css/font-awesome.min.css" rel="stylesheet">
+    <!-- material iconic font CSS -->
+    <link href="Public/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <!-- Animated-text CSS -->
+    <link href="Public/css/animated-text.css" rel="stylesheet">
+    <!-- Slick CSS -->
+    <link href="Public/css/slick.css" rel="stylesheet">
+    <!-- Slick theme CSS -->
+    <link href="Public/css/slick-theme.css" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link href="Public/css/lightbox.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="Public/css/animate.css" rel="stylesheet">
+    <!-- YTPlayer CSS -->
+    <link href="Public/css/jquery.mb.YTPlayer.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="Public/css/style.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="Public/css/responsive.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Navigation -->
+                    <nav class="navbar navbar-default navbar-fixed-top main-nav">
+                        <div class="container">
+                            <div class="navbar-header page-scroll">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="navbar-brand">
+                                    <a class="logo-black" href="index.html">
+                                        <img src="@ViewBag.Logo1" alt="">
+                                    </a>
+                                    <a class="logo-white" href="index.html">
+                                        <img src="@ViewBag.Logo2" alt="">
+                                    </a>
+                                   
+                                    
+                                  
+
+
+                                </div>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                                    <li>
+                                        <a class="page-scroll" href="#page-top">Home</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#service">Service</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#work">Protfolio</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#blog">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  
+        @RenderBody()
+        <footer class="main-footer">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright-col text-center">
+                            <p>Copyright ©2018 <a href="https://themeforest.net/user/awesome_theme" target="_blank">Awesome_Theme</a> All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    <script src="Public/js/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="Public/js/bootstrap.min.js"></script>
+    <!-- All Included JavaScript -->
+    <script src="Public/js/jquery.easing.min.js"></script>
+    <script src="Public/js/scrolling-nav.js"></script>
+    <script src="Public/js/wow.min.js"></script>
+    <script src="Public/js/animated-text.js"></script>
+    <script src="Public/js/slick.min.js"></script>
+    <script src="Public/js/jquery.appear.js"></script>
+    <script src="Public/js/progress-bar-min.js"></script>
+    <script src="Public/js/jquery.waypoints.min.js"></script>
+    <script src="Public/js/jquery.countup.min.js"></script>
+    <script src="Public/js/jarallax.js"></script>
+    <script src="Public/js/lightbox.min.js"></script>
+    <script src="Public/js/dyscrollup.js"></script>
+    <script src="Public/js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="Public/js/jquery.ripples.js"></script>
+    <script src="Public/js/imagesloaded.min.js"></script>
+    <script src="Public/js/jquery.filterizr.min.js"></script>
+    <!-- Google map -->
+    <script src="Public/js/google-map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdEPAHqgxFK5pioDAB3rsvKchAtXxRGO4&amp;callback=initMap"></script>
+    <!-- Custom Js -->
+    <script src="Public/js/main.js"></script>
+    <!-- AJAX Contact Form Using -->
+    <script src="Public/js/app.js"></script>
+</body>
+</html>

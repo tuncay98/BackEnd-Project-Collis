@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CollisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DesTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="BarTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="BarDesc" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bar1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bar2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bar3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bar4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bar1Per" Type="int" />
+          <Property Name="Bar2Per" Type="int" />
+          <Property Name="Bar3Per" Type="int" />
+          <Property Name="Bar4Per" Type="int" />
+          <Property Name="ButtonLeft" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonRight" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Contacts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="150" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="BtnText" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Counter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Number" Type="int" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Filters">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+          <Property Name="Num" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HomePages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image" Type="nvarchar" MaxLength="250" />
+          <Property Name="TitlePart2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HomeSlideTexts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SliderText" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomePageId" Type="int" />
+        </EntityType>
+        <EntityType Name="LogoNavBar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LogoUrl" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="300" />
+          <Property Name="AuthorImage" Type="nvarchar" MaxLength="300" />
+          <Property Name="HoverTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Text" Type="nvarchar" MaxLength="500" />
+          <Property Name="Author" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
+        <EntityType Name="PageTitles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Protofilios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="250" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="150" />
+          <Property Name="Number" Type="int" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="350" />
+        </EntityType>
+        <EntityType Name="SocialSites">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Facebook" Type="nvarchar" MaxLength="50" />
+          <Property Name="Twitter" Type="nvarchar" MaxLength="50" />
+          <Property Name="Google" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ink" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pinteres" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Testimonial">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text" Type="nvarchar" MaxLength="300" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_SlideTexts_HomePagesId">
+          <End Role="HomePages" Type="Self.HomePages" Multiplicity="0..1" />
+          <End Role="HomeSlideTexts" Type="Self.HomeSlideTexts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HomePages">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HomeSlideTexts">
+              <PropertyRef Name="HomePageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CollisModelStoreContainer">
+          <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Counter" EntityType="Self.Counter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Filters" EntityType="Self.Filters" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HomePages" EntityType="Self.HomePages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HomeSlideTexts" EntityType="Self.HomeSlideTexts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogoNavBar" EntityType="Self.LogoNavBar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PageTitles" EntityType="Self.PageTitles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Protofilios" EntityType="Self.Protofilios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SocialSites" EntityType="Self.SocialSites" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Testimonial" EntityType="Self.Testimonial" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_SlideTexts_HomePagesId" Association="Self.FK_SlideTexts_HomePagesId">
+            <End Role="HomePages" EntitySet="HomePages" />
+            <End Role="HomeSlideTexts" EntitySet="HomeSlideTexts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CollisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CollisEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Abouts" EntityType="CollisModel.About" />
+          <EntitySet Name="Contacts" EntityType="CollisModel.Contact" />
+          <EntitySet Name="Counters" EntityType="CollisModel.Counter" />
+          <EntitySet Name="Filters" EntityType="CollisModel.Filter" />
+          <EntitySet Name="HomePages" EntityType="CollisModel.HomePage" />
+          <EntitySet Name="HomeSlideTexts" EntityType="CollisModel.HomeSlideText" />
+          <EntitySet Name="LogoNavBars" EntityType="CollisModel.LogoNavBar" />
+          <EntitySet Name="News" EntityType="CollisModel.News" />
+          <EntitySet Name="PageTitles" EntityType="CollisModel.PageTitle" />
+          <EntitySet Name="Protofilios" EntityType="CollisModel.Protofilio" />
+          <EntitySet Name="Services" EntityType="CollisModel.Service" />
+          <EntitySet Name="SocialSites" EntityType="CollisModel.SocialSite" />
+          <EntitySet Name="Testimonials" EntityType="CollisModel.Testimonial" />
+          <AssociationSet Name="FK_SlideTexts_HomePagesId" Association="CollisModel.FK_SlideTexts_HomePagesId">
+            <End Role="HomePage" EntitySet="HomePages" />
+            <End Role="HomeSlideText" EntitySet="HomeSlideTexts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DesTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BarTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BarDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bar1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bar2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bar3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bar4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bar1Per" Type="Int32" />
+          <Property Name="Bar2Per" Type="Int32" />
+          <Property Name="Bar3Per" Type="Int32" />
+          <Property Name="Bar4Per" Type="Int32" />
+          <Property Name="ButtonLeft" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ButtonRight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BtnText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Counter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Number" Type="Int32" />
+          <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Filter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HomePage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TitlePart2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HomeSlideTexts" Relationship="CollisModel.FK_SlideTexts_HomePagesId" FromRole="HomePage" ToRole="HomeSlideText" />
+        </EntityType>
+        <EntityType Name="HomeSlideText">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SliderText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HomePageId" Type="Int32" />
+          <NavigationProperty Name="HomePage" Relationship="CollisModel.FK_SlideTexts_HomePagesId" FromRole="HomeSlideText" ToRole="HomePage" />
+        </EntityType>
+        <EntityType Name="LogoNavBar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LogoUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Image" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="AuthorImage" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="HoverTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="PageTitle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Desc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Protofilio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Number" Type="Int32" />
+          <Property Name="Photo" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SocialSite">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Facebook" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Twitter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Google" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ink" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pinteres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Testimonial">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_SlideTexts_HomePagesId">
+          <End Type="CollisModel.HomePage" Role="HomePage" Multiplicity="0..1" />
+          <End Type="CollisModel.HomeSlideText" Role="HomeSlideText" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HomePage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HomeSlideText">
+              <PropertyRef Name="HomePageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CollisModelStoreContainer" CdmEntityContainer="CollisEntities">
+          <EntitySetMapping Name="Abouts">
+            <EntityTypeMapping TypeName="CollisModel.About">
+              <MappingFragment StoreEntitySet="About">
+                <ScalarProperty Name="ButtonRight" ColumnName="ButtonRight" />
+                <ScalarProperty Name="ButtonLeft" ColumnName="ButtonLeft" />
+                <ScalarProperty Name="Bar4Per" ColumnName="Bar4Per" />
+                <ScalarProperty Name="Bar3Per" ColumnName="Bar3Per" />
+                <ScalarProperty Name="Bar2Per" ColumnName="Bar2Per" />
+                <ScalarProperty Name="Bar1Per" ColumnName="Bar1Per" />
+                <ScalarProperty Name="Bar4" ColumnName="Bar4" />
+                <ScalarProperty Name="Bar3" ColumnName="Bar3" />
+                <ScalarProperty Name="Bar2" ColumnName="Bar2" />
+                <ScalarProperty Name="Bar1" ColumnName="Bar1" />
+                <ScalarProperty Name="BarDesc" ColumnName="BarDesc" />
+                <ScalarProperty Name="BarTitle" ColumnName="BarTitle" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="DesTitle" ColumnName="DesTitle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="CollisModel.Contact">
+              <MappingFragment StoreEntitySet="Contacts">
+                <ScalarProperty Name="BtnText" ColumnName="BtnText" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Counters">
+            <EntityTypeMapping TypeName="CollisModel.Counter">
+              <MappingFragment StoreEntitySet="Counter">
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Filters">
+            <EntityTypeMapping TypeName="CollisModel.Filter">
+              <MappingFragment StoreEntitySet="Filters">
+                <ScalarProperty Name="Num" ColumnName="Num" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HomePages">
+            <EntityTypeMapping TypeName="CollisModel.HomePage">
+              <MappingFragment StoreEntitySet="HomePages">
+                <ScalarProperty Name="TitlePart2" ColumnName="TitlePart2" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HomeSlideTexts">
+            <EntityTypeMapping TypeName="CollisModel.HomeSlideText">
+              <MappingFragment StoreEntitySet="HomeSlideTexts">
+                <ScalarProperty Name="HomePageId" ColumnName="HomePageId" />
+                <ScalarProperty Name="SliderText" ColumnName="SliderText" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogoNavBars">
+            <EntityTypeMapping TypeName="CollisModel.LogoNavBar">
+              <MappingFragment StoreEntitySet="LogoNavBar">
+                <ScalarProperty Name="LogoUrl" ColumnName="LogoUrl" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="CollisModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="HoverTitle" ColumnName="HoverTitle" />
+                <ScalarProperty Name="AuthorImage" ColumnName="AuthorImage" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PageTitles">
+            <EntityTypeMapping TypeName="CollisModel.PageTitle">
+              <MappingFragment StoreEntitySet="PageTitles">
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Protofilios">
+            <EntityTypeMapping TypeName="CollisModel.Protofilio">
+              <MappingFragment StoreEntitySet="Protofilios">
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="CollisModel.Service">
+              <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SocialSites">
+            <EntityTypeMapping TypeName="CollisModel.SocialSite">
+              <MappingFragment StoreEntitySet="SocialSites">
+                <ScalarProperty Name="Pinteres" ColumnName="Pinteres" />
+                <ScalarProperty Name="Ink" ColumnName="Ink" />
+                <ScalarProperty Name="Google" ColumnName="Google" />
+                <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+                <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Testimonials">
+            <EntityTypeMapping TypeName="CollisModel.Testimonial">
+              <MappingFragment StoreEntitySet="Testimonial">
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

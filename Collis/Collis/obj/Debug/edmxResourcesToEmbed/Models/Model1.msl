@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CollisModelStoreContainer" CdmEntityContainer="CollisEntities">
+    <EntitySetMapping Name="Abouts">
+      <EntityTypeMapping TypeName="CollisModel.About">
+        <MappingFragment StoreEntitySet="About">
+          <ScalarProperty Name="ButtonRight" ColumnName="ButtonRight" />
+          <ScalarProperty Name="ButtonLeft" ColumnName="ButtonLeft" />
+          <ScalarProperty Name="Bar4Per" ColumnName="Bar4Per" />
+          <ScalarProperty Name="Bar3Per" ColumnName="Bar3Per" />
+          <ScalarProperty Name="Bar2Per" ColumnName="Bar2Per" />
+          <ScalarProperty Name="Bar1Per" ColumnName="Bar1Per" />
+          <ScalarProperty Name="Bar4" ColumnName="Bar4" />
+          <ScalarProperty Name="Bar3" ColumnName="Bar3" />
+          <ScalarProperty Name="Bar2" ColumnName="Bar2" />
+          <ScalarProperty Name="Bar1" ColumnName="Bar1" />
+          <ScalarProperty Name="BarDesc" ColumnName="BarDesc" />
+          <ScalarProperty Name="BarTitle" ColumnName="BarTitle" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="DesTitle" ColumnName="DesTitle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="CollisModel.Contact">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="BtnText" ColumnName="BtnText" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counters">
+      <EntityTypeMapping TypeName="CollisModel.Counter">
+        <MappingFragment StoreEntitySet="Counter">
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filters">
+      <EntityTypeMapping TypeName="CollisModel.Filter">
+        <MappingFragment StoreEntitySet="Filters">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomePages">
+      <EntityTypeMapping TypeName="CollisModel.HomePage">
+        <MappingFragment StoreEntitySet="HomePages">
+          <ScalarProperty Name="TitlePart2" ColumnName="TitlePart2" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomeSlideTexts">
+      <EntityTypeMapping TypeName="CollisModel.HomeSlideText">
+        <MappingFragment StoreEntitySet="HomeSlideTexts">
+          <ScalarProperty Name="HomePageId" ColumnName="HomePageId" />
+          <ScalarProperty Name="SliderText" ColumnName="SliderText" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogoNavBars">
+      <EntityTypeMapping TypeName="CollisModel.LogoNavBar">
+        <MappingFragment StoreEntitySet="LogoNavBar">
+          <ScalarProperty Name="LogoUrl" ColumnName="LogoUrl" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="CollisModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="HoverTitle" ColumnName="HoverTitle" />
+          <ScalarProperty Name="AuthorImage" ColumnName="AuthorImage" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PageTitles">
+      <EntityTypeMapping TypeName="CollisModel.PageTitle">
+        <MappingFragment StoreEntitySet="PageTitles">
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Protofilios">
+      <EntityTypeMapping TypeName="CollisModel.Protofilio">
+        <MappingFragment StoreEntitySet="Protofilios">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="CollisModel.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialSites">
+      <EntityTypeMapping TypeName="CollisModel.SocialSite">
+        <MappingFragment StoreEntitySet="SocialSites">
+          <ScalarProperty Name="Pinteres" ColumnName="Pinteres" />
+          <ScalarProperty Name="Ink" ColumnName="Ink" />
+          <ScalarProperty Name="Google" ColumnName="Google" />
+          <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Testimonials">
+      <EntityTypeMapping TypeName="CollisModel.Testimonial">
+        <MappingFragment StoreEntitySet="Testimonial">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

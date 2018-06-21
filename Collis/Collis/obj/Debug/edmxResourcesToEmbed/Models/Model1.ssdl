@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CollisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="About">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DesTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Desc" Type="nvarchar" MaxLength="500" />
+    <Property Name="BarTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="BarDesc" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bar1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bar2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bar3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bar4" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bar1Per" Type="int" />
+    <Property Name="Bar2Per" Type="int" />
+    <Property Name="Bar3Per" Type="int" />
+    <Property Name="Bar4Per" Type="int" />
+    <Property Name="ButtonLeft" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonRight" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="150" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="BtnText" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Number" Type="int" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Filters">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" />
+    <Property Name="Num" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HomePages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="TitlePart2" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HomeSlideTexts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SliderText" Type="nvarchar" MaxLength="50" />
+    <Property Name="HomePageId" Type="int" />
+  </EntityType>
+  <EntityType Name="LogoNavBar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogoUrl" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="300" />
+    <Property Name="AuthorImage" Type="nvarchar" MaxLength="300" />
+    <Property Name="HoverTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Text" Type="nvarchar" MaxLength="500" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <EntityType Name="PageTitles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Desc" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Protofilios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Number" Type="int" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="350" />
+  </EntityType>
+  <EntityType Name="SocialSites">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Facebook" Type="nvarchar" MaxLength="50" />
+    <Property Name="Twitter" Type="nvarchar" MaxLength="50" />
+    <Property Name="Google" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ink" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pinteres" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Testimonial">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text" Type="nvarchar" MaxLength="300" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_SlideTexts_HomePagesId">
+    <End Role="HomePages" Type="Self.HomePages" Multiplicity="0..1" />
+    <End Role="HomeSlideTexts" Type="Self.HomeSlideTexts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HomePages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HomeSlideTexts">
+        <PropertyRef Name="HomePageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CollisModelStoreContainer">
+    <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Counter" EntityType="Self.Counter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Filters" EntityType="Self.Filters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HomePages" EntityType="Self.HomePages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HomeSlideTexts" EntityType="Self.HomeSlideTexts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogoNavBar" EntityType="Self.LogoNavBar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PageTitles" EntityType="Self.PageTitles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Protofilios" EntityType="Self.Protofilios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SocialSites" EntityType="Self.SocialSites" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Testimonial" EntityType="Self.Testimonial" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_SlideTexts_HomePagesId" Association="Self.FK_SlideTexts_HomePagesId">
+      <End Role="HomePages" EntitySet="HomePages" />
+      <End Role="HomeSlideTexts" EntitySet="HomeSlideTexts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

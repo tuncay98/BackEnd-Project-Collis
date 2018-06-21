@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CollisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CollisEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Abouts" EntityType="CollisModel.About" />
+    <EntitySet Name="Contacts" EntityType="CollisModel.Contact" />
+    <EntitySet Name="Counters" EntityType="CollisModel.Counter" />
+    <EntitySet Name="Filters" EntityType="CollisModel.Filter" />
+    <EntitySet Name="HomePages" EntityType="CollisModel.HomePage" />
+    <EntitySet Name="HomeSlideTexts" EntityType="CollisModel.HomeSlideText" />
+    <EntitySet Name="LogoNavBars" EntityType="CollisModel.LogoNavBar" />
+    <EntitySet Name="News" EntityType="CollisModel.News" />
+    <EntitySet Name="PageTitles" EntityType="CollisModel.PageTitle" />
+    <EntitySet Name="Protofilios" EntityType="CollisModel.Protofilio" />
+    <EntitySet Name="Services" EntityType="CollisModel.Service" />
+    <EntitySet Name="SocialSites" EntityType="CollisModel.SocialSite" />
+    <EntitySet Name="Testimonials" EntityType="CollisModel.Testimonial" />
+    <AssociationSet Name="FK_SlideTexts_HomePagesId" Association="CollisModel.FK_SlideTexts_HomePagesId">
+      <End Role="HomePage" EntitySet="HomePages" />
+      <End Role="HomeSlideText" EntitySet="HomeSlideTexts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="About">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BarTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BarDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bar1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bar2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bar3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bar4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bar1Per" Type="Int32" />
+    <Property Name="Bar2Per" Type="Int32" />
+    <Property Name="Bar3Per" Type="Int32" />
+    <Property Name="Bar4Per" Type="Int32" />
+    <Property Name="ButtonLeft" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ButtonRight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BtnText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Filter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HomePage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TitlePart2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HomeSlideTexts" Relationship="CollisModel.FK_SlideTexts_HomePagesId" FromRole="HomePage" ToRole="HomeSlideText" />
+  </EntityType>
+  <EntityType Name="HomeSlideText">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SliderText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HomePageId" Type="Int32" />
+    <NavigationProperty Name="HomePage" Relationship="CollisModel.FK_SlideTexts_HomePagesId" FromRole="HomeSlideText" ToRole="HomePage" />
+  </EntityType>
+  <EntityType Name="LogoNavBar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogoUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorImage" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="HoverTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Text" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="PageTitle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Desc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Protofilio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="Photo" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SocialSite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Facebook" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Twitter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Google" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ink" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pinteres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Testimonial">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_SlideTexts_HomePagesId">
+    <End Type="CollisModel.HomePage" Role="HomePage" Multiplicity="0..1" />
+    <End Type="CollisModel.HomeSlideText" Role="HomeSlideText" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HomePage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HomeSlideText">
+        <PropertyRef Name="HomePageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
