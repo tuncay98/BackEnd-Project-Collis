@@ -15,7 +15,7 @@ namespace Collis.Controllers
         public List<Service> services { get; set; }
         public List<Counter> cou { get; set; }
         public List<Protofilio> pro { get; set; }
-        public List<Filter> fil { get; set; }
+        public List<Collis.Models.Filter> fil { get; set; }
         public List<Testimonial> testi { get; set; }
         public List<News> news { get; set; }
     }

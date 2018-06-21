@@ -7,6 +7,7 @@
     <EntitySet Name="Filters" EntityType="CollisModel.Filter" />
     <EntitySet Name="HomePages" EntityType="CollisModel.HomePage" />
     <EntitySet Name="HomeSlideTexts" EntityType="CollisModel.HomeSlideText" />
+    <EntitySet Name="Logins" EntityType="CollisModel.Login" />
     <EntitySet Name="LogoNavBars" EntityType="CollisModel.LogoNavBar" />
     <EntitySet Name="News" EntityType="CollisModel.News" />
     <EntitySet Name="PageTitles" EntityType="CollisModel.PageTitle" />
@@ -85,6 +86,14 @@
     <Property Name="SliderText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="HomePageId" Type="Int32" />
     <NavigationProperty Name="HomePage" Relationship="CollisModel.FK_SlideTexts_HomePagesId" FromRole="HomeSlideText" ToRole="HomePage" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="LogoNavBar">
     <Key>

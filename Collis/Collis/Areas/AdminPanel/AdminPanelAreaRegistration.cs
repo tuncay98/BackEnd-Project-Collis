@@ -16,7 +16,7 @@ namespace Collis.Areas.AdminPanel
         {
             context.MapRoute(
                 "Manage_default",
-                "Manage/{controller}/{action}/{id}",
+                "AdminPanel/{controller}/{action}/{id}",
                 new { controller= "Manage" , action = "Index", id = UrlParameter.Optional },
                 new[] { "Collis.Areas.AdminPanel.Controllers" }
 

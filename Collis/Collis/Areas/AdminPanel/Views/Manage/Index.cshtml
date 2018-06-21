@@ -14,11 +14,11 @@
     <meta name="author" content="">
     <title>SB Admin - Start Bootstrap Template</title>
     <!-- Bootstrap core CSS-->
-    <link href="Areas/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
-    <link href="Areas/Public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Areas/Public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
-    <link href="Areas/Public/css/sb-admin.css" rel="stylesheet">
+    <link href="~/Areas/Public/css/sb-admin.css" rel="stylesheet">
 </head>
 
 <body class="bg-dark">
@@ -26,14 +26,19 @@
         <div class="card card-login mx-auto mt-5">
             <div class="card-header">Login</div>
             <div class="card-body">
-                <form>
+                <form method="post" action="@Url.Action("Index", "Manage")">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input class="form-control" id="exampleInputEmail1" name="Email" type="email" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+                        <input class="form-control" id="exampleInputPassword1" name="Password" type="password" placeholder="Password">
+                   @if (Session["Wrong"] != null)
+                   {
+                       <label class="alert-warning" >Email ve ya Parol Sehvdir!</label>
+                       Session["Wrong"] = null;
+                   }
                     </div>
                     <div class="form-group">
                         <div class="form-check">
@@ -42,20 +47,17 @@
                             </label>
                         </div>
                     </div>
-                    <a class="btn btn-primary btn-block" href="index.html">Login</a>
+                    <button class="btn btn-primary">Login</button>
                 </form>
-                <div class="text-center">
-                    <a class="d-block small mt-3" href="register.html">Register an Account</a>
-                    <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-                </div>
+               
             </div>
         </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="Areas/Public/vendor/jquery/jquery.min.js"></script>
-    <script src="Areas/Public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Areas/Public/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Areas/Public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
-    <script src="Areas/Public/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Areas/Public/vendor/jquery-easing/jquery.easing.min.js"></script>
 </body>
 
 </html>

@@ -31,6 +31,7 @@ namespace Collis.Models
         public virtual DbSet<Filter> Filters { get; set; }
         public virtual DbSet<HomePage> HomePages { get; set; }
         public virtual DbSet<HomeSlideText> HomeSlideTexts { get; set; }
+        public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<LogoNavBar> LogoNavBars { get; set; }
         public virtual DbSet<News> News { get; set; }
         public virtual DbSet<PageTitle> PageTitles { get; set; }

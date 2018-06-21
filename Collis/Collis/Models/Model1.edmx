@@ -70,6 +70,14 @@
           <Property Name="SliderText" Type="nvarchar" MaxLength="50" />
           <Property Name="HomePageId" Type="int" />
         </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="Password" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="LogoNavBar">
           <Key>
             <PropertyRef Name="Id" />
@@ -157,6 +165,7 @@
           <EntitySet Name="Filters" EntityType="Self.Filters" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HomePages" EntityType="Self.HomePages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HomeSlideTexts" EntityType="Self.HomeSlideTexts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LogoNavBar" EntityType="Self.LogoNavBar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PageTitles" EntityType="Self.PageTitles" Schema="dbo" store:Type="Tables" />
@@ -180,6 +189,7 @@
           <EntitySet Name="Filters" EntityType="CollisModel.Filter" />
           <EntitySet Name="HomePages" EntityType="CollisModel.HomePage" />
           <EntitySet Name="HomeSlideTexts" EntityType="CollisModel.HomeSlideText" />
+          <EntitySet Name="Logins" EntityType="CollisModel.Login" />
           <EntitySet Name="LogoNavBars" EntityType="CollisModel.LogoNavBar" />
           <EntitySet Name="News" EntityType="CollisModel.News" />
           <EntitySet Name="PageTitles" EntityType="CollisModel.PageTitle" />
@@ -258,6 +268,14 @@
           <Property Name="SliderText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="HomePageId" Type="Int32" />
           <NavigationProperty Name="HomePage" Relationship="CollisModel.FK_SlideTexts_HomePagesId" FromRole="HomeSlideText" ToRole="HomePage" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LogoNavBar">
           <Key>
@@ -412,6 +430,15 @@
               <MappingFragment StoreEntitySet="HomeSlideTexts">
                 <ScalarProperty Name="HomePageId" ColumnName="HomePageId" />
                 <ScalarProperty Name="SliderText" ColumnName="SliderText" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="CollisModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

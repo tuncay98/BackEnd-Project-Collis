@@ -65,6 +65,14 @@
     <Property Name="SliderText" Type="nvarchar" MaxLength="50" />
     <Property Name="HomePageId" Type="int" />
   </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="Password" Type="nvarchar" MaxLength="500" />
+  </EntityType>
   <EntityType Name="LogoNavBar">
     <Key>
       <PropertyRef Name="Id" />
@@ -152,6 +160,7 @@
     <EntitySet Name="Filters" EntityType="Self.Filters" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HomePages" EntityType="Self.HomePages" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HomeSlideTexts" EntityType="Self.HomeSlideTexts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LogoNavBar" EntityType="Self.LogoNavBar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PageTitles" EntityType="Self.PageTitles" Schema="dbo" store:Type="Tables" />
